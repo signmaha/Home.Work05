@@ -1,4 +1,4 @@
-def calculate_structure_sum(n):
+ def calculate_structure_sum(n):
     global summa
 
     for item in n:

@@ -4,9 +4,11 @@ def get_multipiled_digits(number):
     if len(str_number) > 1:
 
         return first * get_multipiled_digits(int(str_number[1:]))
+    elif first == 0:
+        return 1
     else:
         return first
 
 
 print(get_multipiled_digits(40203))
-print(get_multipiled_digits(402030))
+print(get_multipiled_digits(40203))
