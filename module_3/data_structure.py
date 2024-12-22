@@ -1,14 +1,16 @@
- def calculate_structure_sum(n):
+def calculate_structure_sum(n):
     global summa
 
     for item in n:
         if isinstance(item, (list, tuple, set)):
             calculate_structure_sum(item)
+        if isinstance(item, dict):
+            calculate_structure_sum(item.items())
         elif isinstance(item, (int, float)):
             summa += item
         elif isinstance(item, str):
             summa += len(item)
-            return summa
+    return summa
 
 
 data_structure = [
